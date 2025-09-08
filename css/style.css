@@ -169,15 +169,16 @@ body {
 
   .top-section {
     flex-direction: column; /* foto arriba, nombre abajo */
+    align-items: center;    /* centramos foto + caja */
     text-align: center;
   }
 
   .profile-pic {
-    margin: 0 auto; /* centramos la foto en móvil */
+    margin: 0; /* sin márgenes extras */
   }
 
   .header {
-    margin: 1em auto 0; /* centramos la caja en móvil */
+    margin: 1em 0 0; /* un poco de espacio arriba */
   }
 
   .sidebar, .main {
