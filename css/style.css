@@ -164,21 +164,21 @@ body {
 
 @media (max-width: 900px) {
   .container {
-    grid-template-columns: 1fr; /* una sola columna */
+    grid-template-columns: 1fr;
   }
 
   .top-section {
-    flex-direction: column; /* foto arriba, nombre abajo */
-    align-items: center;    /* centramos foto + caja */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .profile-pic {
-    margin: 0; /* sin márgenes extras */
+    margin: 0;
   }
 
   .header {
-    margin: 1em 0 0; /* un poco de espacio arriba */
+    margin: 1em 0 0
   }
 
   .sidebar, .main {
