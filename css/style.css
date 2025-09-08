@@ -28,12 +28,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.2em;
+  align-items: center;
 }
 
 .profile-pic {
   width: 180px;
   height: 180px;
-  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
   border: 6px solid white;
@@ -49,6 +49,7 @@ body {
   padding: 1.5em;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
 }
 .box h3 {
   font-size: 1.1em;
@@ -109,6 +110,7 @@ body {
   flex-direction: column;
   gap: 1.5em;
 }
+
 .header h1 {
   font-size: 2.4em;
   font-weight: bold;
@@ -146,14 +148,25 @@ body {
   font-size: 1.05em;
 }
 
+/* 🔥 Ajustes responsive */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
+    align-items: center;
   }
   .sidebar, .main {
     width: 100%;
   }
   .redes {
     justify-content: center;
+  }
+
+  /* mover header debajo de la foto */
+  .main {
+    order: 2; /* mantiene main abajo */
+  }
+  .header {
+    order: -1; /* sube el header */
+    text-align: center;
   }
 }
