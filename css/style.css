@@ -17,18 +17,20 @@ body {
 }
 
 .container {
-  display: flex;
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 32% 68%;
   gap: 1.5em;
   padding: 1.5em;
+  min-height: 100vh;
 }
 
-.sidebar {
-  width: 32%;
+
+.top-section {
+  grid-column: 1 / span 2;
   display: flex;
-  flex-direction: column;
-  gap: 1.2em;
   align-items: center;
+  gap: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .profile-pic {
@@ -37,11 +39,28 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 6px solid white;
+  margin-left: 1.5em;
 }
 .profile-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+.header {
+  flex: 1;
+  margin-left: 1.5em;
+}
+.header h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: var(--primary);
+}
+.header h2 {
+  font-size: 1.1em;
+  color: #444;
+  margin-top: 0.3em;
 }
 
 .box {
@@ -55,6 +74,13 @@ body {
   font-size: 1.1em;
   margin-bottom: 0.8em;
   color: var(--primary);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  align-items: center;
 }
 
 .contacto {
@@ -105,21 +131,9 @@ body {
 }
 
 .main {
-  width: 68%;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-}
-
-.header h1 {
-  font-size: 2.4em;
-  font-weight: bold;
-  color: var(--primary);
-}
-.header h2 {
-  font-size: 1.2em;
-  color: #444;
-  margin-top: 0.3em;
 }
 
 .habilidades {
@@ -148,25 +162,25 @@ body {
   font-size: 1.05em;
 }
 
-/* 🔥 Ajustes responsive */
 @media (max-width: 900px) {
   .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .sidebar, .main {
-    width: 100%;
-  }
-  .redes {
-    justify-content: center;
+    grid-template-columns: 1fr;
   }
 
-  /* mover header debajo de la foto */
-  .main {
-    order: 2; /* mantiene main abajo */
-  }
-  .header {
-    order: -1; /* sube el header */
+  .top-section {
+    flex-direction: column;
     text-align: center;
+  }
+
+  .profile-pic {
+    margin-left: 0;
+  }
+
+  .header {
+    margin-left: 0;
+  }
+
+  .sidebar, .main {
+    width: 100%;
   }
 }
